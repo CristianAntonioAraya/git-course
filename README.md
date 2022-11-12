@@ -11,9 +11,9 @@
 
 <div id='id1' />
 
-## 1. DEFINICIONES 📖
-
 ---
+
+## 1. DEFINICIONES 📖
 
 -   **`repositorio`** : Es el sistema de control de versiones de tu proyecto
 -   **`commit`** : Captura instantanea de los cambios preparados en ese momento
@@ -26,9 +26,9 @@
 
 <div id='id2' />
 
-## 2. FLAGS 🚩
-
 ---
+
+## 2. FLAGS 🚩
 
 Las flags o banderas nos permiten agregarles caracteristicas a los comandos, dichas banderas suelen tener una version corta.
 
@@ -40,9 +40,9 @@ En el comando `git log --patch`, --patch seria la bandera de este comando,para `
 
 <div id='id3' />
 
-## 3. COMANDOS BÁSICOS📓
-
 ---
+
+## 3. COMANDOS BÁSICOS📓
 
 -   **`git init`** : crea un repositorio vacio
 
@@ -82,9 +82,9 @@ En el comando `git log --patch`, --patch seria la bandera de este comando,para `
 
 <div id='id4' />
 
-## 4. CONFIGURACIONES DEL USUARIO 🤵‍♂️
-
 ---
+
+## 4. CONFIGURACIONES DEL USUARIO 🤵‍♂️
 
 -   **`git config --global user.name "<userName>"`** : establece el nombre asociado a git de forma global.
 
@@ -96,9 +96,9 @@ En el comando `git log --patch`, --patch seria la bandera de este comando,para `
 
 <div id='id5' />
 
-## 5. ARCHIVOS ESPECIALES DE GIT 📁
-
 ---
+
+## 5. ARCHIVOS ESPECIALES DE GIT 📁
 
 -   **`.gitignore`** : Lugar donde se indica que archivos deben ser ignorados por git
 
@@ -106,9 +106,9 @@ En el comando `git log --patch`, --patch seria la bandera de este comando,para `
 
 <div id='id6' />
 
-## 6. PREGUNTAS FRECUENTES 💡
-
 ---
+
+## 6. PREGUNTAS FRECUENTES 💡
 
 **_❓ Como inicializar el repositorio de git?._**
 
