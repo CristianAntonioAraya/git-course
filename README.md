@@ -141,6 +141,16 @@ En el comando `git log --patch`, --patch seria la bandera de este comando,para `
 
 ➡️ Esta parte es muy importante ya que es donde se coloca el seguimiento de los issues o tickets relacionados con los cambios generados.
 
+## Ejemplo
+
+```
+📚 DOCS: Changes in README file
+
+Se agrego mas informacion en la documentacion del proyecto,
+
+Issue: 1#
+```
+
 ## <div id='id6' />
 
 ---
