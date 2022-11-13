@@ -6,8 +6,8 @@
 2. [Flags o Banderas](#id2)
 3. [Comandos Básicos](#id3)
 4. [Configuraciones del usuario](#id4)
-5. [Configuraciones del usuario](#id5)
-6. [Recomendaciones para un buen commit](#id6)
+5. [Recomendaciones para un buen commit](#id5)
+6. [Archivos especiales de Git](#id5)
 7. [Preguntas frecuentes](#id7)
 
 <div id='id1' />
@@ -103,9 +103,9 @@ En el comando `git log --patch`, --patch seria la bandera de este comando,para `
 
 ## 5. Recomendaciones para un buen commit 📝
 
-###  Estructura Básica🚧
+### Estructura Básica🚧
 
-➡️ Usualmente el mensaje de commit se divide en 3 partes, *titulo*, *cuerpo* y *pie*
+➡️ Usualmente el mensaje de commit se divide en 3 partes, _titulo_, _cuerpo_ y _pie_
 
 ```
     [Titulo] => [tipo]: asunto
@@ -115,25 +115,25 @@ En el comando `git log --patch`, --patch seria la bandera de este comando,para `
     [Pie]
 ```
 
-###  Tipos/Type 📘
+### Tipos/Type 📘
 
-- **[add]**: Se agregaron archivos.
-- **[delete]**: Se eliminaron archivos.
-- **[test]**: Cambios en los archivos de testeo */test.
-- **[dist]**: Cambios en los modulos del proyecto.
-- **[minor]**: Pequeños cambios en el proyecto.
-- **[doc]**: Cambios en la documentación.
-- **[fix]**: Correción de errores.
-- **[bin]**: Cambios en los scripts binarios asociados con el proyecto.
-- **[refactor]**: Refactorización de codigo existente.
-- **[nit]**: Pequeños cambios relacionados a estilo o sintaxis
-- **[feat]**: Nuevas caracteristicas
+-   **[add]**: Se agregaron archivos.
+-   **[delete]**: Se eliminaron archivos.
+-   **[test]**: Cambios en los archivos de testeo \*/test.
+-   **[dist]**: Cambios en los modulos del proyecto.
+-   **[minor]**: Pequeños cambios en el proyecto.
+-   **[doc]**: Cambios en la documentación.
+-   **[fix]**: Correción de errores.
+-   **[bin]**: Cambios en los scripts binarios asociados con el proyecto.
+-   **[refactor]**: Refactorización de codigo existente.
+-   **[nit]**: Pequeños cambios relacionados a estilo o sintaxis
+-   **[feat]**: Nuevas caracteristicas
 
-###  Asunto/Subject 📧
+### Asunto/Subject 📧
 
-➡️  Usualmente contiene aproximadamente 50 caracteres, se inicia con mayuscula y no termina con punto, Se escribe en modo imperativo, y la mejor práctica esque debe ser en inglés.
+➡️ Usualmente contiene aproximadamente 50 caracteres, se inicia con mayuscula y no termina con punto, Se escribe en modo imperativo, y la mejor práctica esque debe ser en inglés.
 
-###  Body/Cuerpo 📝
+### Body/Cuerpo 📝
 
 ➡️ Se utiliza para explicar el ¿Qué? y ¿Por qué? del commit y no el ¿Cómo?, Al escribir el cuerpo, requerimos de una línea en blanco entre el título y el cuerpo
 
