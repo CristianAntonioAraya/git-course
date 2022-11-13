@@ -6,8 +6,9 @@
 2. [Flags o Banderas](#id2)
 3. [Comandos Básicos](#id3)
 4. [Configuraciones del usuario](#id4)
-5. [Archivos especiales de git](#i5)
-6. [Preguntas frecuentes](#id6)
+5. [Configuraciones del usuario](#id5)
+6. [Recomendaciones para un buen commit](#id6)
+7. [Preguntas frecuentes](#id7)
 
 <div id='id1' />
 
@@ -60,9 +61,11 @@ En el comando `git log --patch`, --patch seria la bandera de este comando,para `
 
 -   **`git add <fileName>`** : Le da seguimiento a los archivos o carpetas del proyecto.
 
--   **`git rm --cached`** : mueve los archivos que seleccionamos al estado untracked
+-   **`git rm`** : Este comando nos ayuda a eliminar archivos de git sin eliminar su historial del sistema de versiones, este commando necesita funcionar con una de las dos banderas disponibles.
 
--   **`git rm --force`** : elimina los archivos de git y disco duro, git guarda el registro de la existencia de los archivos.
+-   **`git rm --cached`** : Elimina los archivos de nuesto repositorio local y staging area, pero lo mantiene en nuestro disco duro.
+
+-   **`git rm --force`** : Elimina los archivos de git y disco duro, se requeriran comandos mas avanzados para poder recuperarlos
 
 -   **`git reset <fileName>`** : Deshace los cambios locales en el estado (staged to unStaged) de un repositorio de git
 
@@ -98,17 +101,61 @@ En el comando `git log --patch`, --patch seria la bandera de este comando,para `
 
 ---
 
-## 5. ARCHIVOS ESPECIALES DE GIT 📁
+## 5. Recomendaciones para un buen commit 📝
+
+###  Estructura Básica🚧
+
+➡️ Usualmente el mensaje de commit se divide en 3 partes, *titulo*, *cuerpo* y *pie*
+
+```
+    [Titulo] => [tipo]: asunto
+
+    [Cuerpo]
+
+    [Pie]
+```
+
+###  Tipos/Type 📘
+
+- **[add]**: Se agregaron archivos.
+- **[delete]**: Se eliminaron archivos.
+- **[test]**: Cambios en los archivos de testeo */test.
+- **[dist]**: Cambios en los modulos del proyecto.
+- **[minor]**: Pequeños cambios en el proyecto.
+- **[doc]**: Cambios en la documentación.
+- **[fix]**: Correción de errores.
+- **[bin]**: Cambios en los scripts binarios asociados con el proyecto.
+- **[refactor]**: Refactorización de codigo existente.
+- **[nit]**: Pequeños cambios relacionados a estilo o sintaxis
+- **[feat]**: Nuevas caracteristicas
+
+###  Asunto/Subject 📧
+
+➡️  Usualmente contiene aproximadamente 50 caracteres, se inicia con mayuscula y no termina con punto, Se escribe en modo imperativo, y la mejor práctica esque debe ser en inglés.
+
+###  Body/Cuerpo 📝
+
+➡️ Se utiliza para explicar el ¿Qué? y ¿Por qué? del commit y no el ¿Cómo?, Al escribir el cuerpo, requerimos de una línea en blanco entre el título y el cuerpo
+
+## Footer/Pie 👣
+
+➡️ Esta parte es muy importante ya que es donde se coloca el seguimiento de los issues o tickets relacionados con los cambios generados.
+
+## <div id='id6' />
+
+---
+
+## 6. ARCHIVOS ESPECIALES DE GIT 📁
 
 -   **`.gitignore`** : Lugar donde se indica que archivos deben ser ignorados por git
 
 -   **`.gitkeep`** : se crea usualmente en carpetas sin contenido para avisarle a git que las mantenga, por defecto git ignora carpetas sin contenido
 
-<div id='id6' />
+<div id='id7' />
 
 ---
 
-## 6. PREGUNTAS FRECUENTES 💡
+## 7. PREGUNTAS FRECUENTES 💡
 
 **_❓ Como inicializar el repositorio de git?._**
 
@@ -126,3 +173,7 @@ En el comando `git log --patch`, --patch seria la bandera de este comando,para `
 -   `git log --all`: Permite ver el historial de commits de todas las ramas, incluso las que aun no se han unido a la principal.
 -   `git log --author="username or email"` Permite filtrar el historial de commits por usuario o email.
 -   `git log -<n>`: n es la cantidad de commits que se mostraran desde el mas reciente hacia atras.
+
+**❓ Como podemos viajar en el tiempo y volver a un commit anterior?.**
+
+➡️
