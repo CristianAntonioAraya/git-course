@@ -1,4 +1,8 @@
-# Sistema de control de versiones _git_
+<div align='center'>
+  <img height="60" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png">
+  <h1>Resumen Básico del Control de versiones Git.</h1>
+  Creado por <strong>@CarayaDev</strong>
+</div>
 
 ## [ÍNDICE](#indice)
 
@@ -9,12 +13,13 @@
 5. [Recomendaciones para un buen commit](#id5)
 6. [Archivos especiales de Git](#id5)
 7. [Preguntas frecuentes](#id7)
-    - [Como inicializar el repositorio de git?.](#q1)
-    - [Como agregar archivos al stage area?.](#q2)
-    - [Como actualizar el mensaje de un commit ya hecho?.](#q3)
-    - [Como puedo ver el historial de commits?.](#q4)
-    - [Como podemos volver en el tiempo a un commit anterior?.](#q5)
-    - [Cúal es el ID o Hash de un commit?.](#q6)
+    - [Cómo inicializar el repositorio de git?.](#q1)
+    - [Cómo agregar archivos al stage area?.](#q2)
+    - [Cómo actualizar el mensaje de un commit ya hecho?.](#q3)
+    - [Cómo puedo ver el historial de commits?.](#q4)
+    - [Cómo podemos volver en el tiempo a un commit anterior?.](#q5)
+    - [Cuál es el ID o Hash de un commit?.](#q6)
+    - [Cuáles son los ciclos de vida de los archivos de Git?.](#q7)
 
 <div id='id1' />
 
@@ -30,7 +35,7 @@
 -   **`status`** : Estado actual del repositorio
 -   **`staged`**: Son los archivos que actualmente viven en el staging area
 -   **`working directory`**: Es el area donde se desarrolla el proyecto.
--   **`staging area`** : Lugar donde temporalemente se guardan los cambios del proyecto antes de ser llevados al repositorio o regresados
+-   **`staging area`** : Lugar donde temporalemente se guardan los cambios del proyecto antes de ser llevados al repositorio.
 
 <div id='id2' />
 
@@ -176,6 +181,19 @@ Issue: 1#
 
 ---
 
+## <div id='q0'>
+
+**_❓Qué es Git?._**
+
+➡️ Git es un sistema de control de versiones, creado por linus torvalds.
+<br>
+Su principal proposito es llevar **registro** de los cambios en archivos de computadora y **coordinar** el trabajo que varias personas realizan sobre archivos compartidos de un repositorio.
+<br>
+
+**[⬆ Volver a índice](#índice)**
+
+---
+
 ## <div id='q1' />
 
 **_❓ Como inicializar el repositorio de git?._**
@@ -186,7 +204,7 @@ Issue: 1#
 git init
 ```
 
-Con esto se crea el repositorio del proyecto con la configuracion inicial, creando a su vez un sub directorio con extension .git en tu directorio de trabajo actual, este archivo aparece *oculto* en la raiz de tu proyecto.
+Con esto se crea el repositorio del proyecto con la configuracion inicial, creando a su vez un sub directorio con extension .git en tu directorio de trabajo actual, este archivo aparece _oculto_ en la raiz de tu proyecto.
 
 <br>
 
@@ -267,11 +285,9 @@ El otro método un tanto mas "rudo" es con el comando
 git reset
 ```
 
-La principal diferencia con checkout esque no solo "volveremos en el tiempo", sino que borraremos los cambios que hicimos despues de este commit.
+La principal diferencia con checkout esque no solo "volveremos en el tiempo", sino que dependiendo de la opcion que elijamos, estaremos en una u otro estado del proyecto ()
 
 Existen tres formas de usar este comando, con la bandera `--hard` que borra toda la informacion que tengamos en el staging area, y la que es un poco mas segura `--soft` que mantiene dicha informacion para que los cambios realizados sean aplicados desde un punto anterior y por ultimo `--mixed` que elimina los cambios hasta el working area.
-
-Utilizar `git checkout` lo mas posible, pero si es estrictamente necesario usar `git reset` procure dominarlo para no caer en errores irreversibles.
 
 <br>
 
@@ -310,6 +326,39 @@ Commit Abreviado ⬇️(git log --oneline)
 ```
 
 Tanto **`9d2cdf3a12400cfaf9aa0c8fb0aa4e688f04a9cf`** en el commit completo como **`9d2cdf3`** en el commit abreviado, son el identificador del mismo commit, cualquiera de los dos sirven para ser usados en comandos.
+
+<br>
+
+**[⬆ Volver a índice](#índice)**
+
+---
+
+## <div id='q7'>
+
+**_❓Cuales son los ciclos de vida de los archivos de Git?._**
+
+➡️ Al trabajar en un repositorio de Git, los archivos constantemente se mueven entre 4 estados.
+
+1. **Archivos untracked.**
+    - Archivos que **no** viven dentro del repositorio, **solo en nuestro disco duro**.
+    - **Nunca** han sido afectados por el comando `git add`
+    - Git no tiene registro de su existencia
+2. **Archivos unstaged.**
+    - Archivos que viven dentro del repositorio de git
+    - No han sido afectados por el comando `git add` ni `git commit`
+    - Git tiene un regitro desactualizado de estos archivos.
+    - Sus últimas versiones solo están guardadas en el disco duro.
+3. **Archivos staged.**
+    - Archivos que estan en stagin o stage area.
+    - Viven dentro de git.
+    - Hay registros de ellos por lo que han sido afectodos por el comando `git add`.
+4. **Archivos tracked.**
+    - Archivos que viven dentro de git.
+    - No tiene cambios pendientes
+    - Sus ultimas actualizaciones se han guardado en el repositorio por medio de comandos `git add` y `git commit`
+
+Por ultimo, hay un caso donde un archivo puede vivir en dos estados a la vez, `staged` y `untracked`,
+esto pasa cuando guardas los cambios de un archivo en el `stage area` _(con el comando `git add`)_, pero antes de guardarlo en el repositorio con `git commit`.
 
 <br>
 
