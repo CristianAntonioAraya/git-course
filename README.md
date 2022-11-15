@@ -13,13 +13,15 @@
 5. [Recomendaciones para un buen commit](#id5)
 6. [Archivos especiales de Git](#id5)
 7. [Preguntas frecuentes](#id7)
-    - [Cómo inicializar el repositorio de git?.](#q1)
-    - [Cómo agregar archivos al stage area?.](#q2)
-    - [Cómo actualizar el mensaje de un commit ya hecho?.](#q3)
-    - [Cómo puedo ver el historial de commits?.](#q4)
-    - [Cómo podemos volver en el tiempo a un commit anterior?.](#q5)
-    - [Cuál es el ID o Hash de un commit?.](#q6)
-    - [Cuáles son los ciclos de vida de los archivos de Git?.](#q7)
+    - [Qué es Git?.](#q0)
+    - [Como funciona git?.](#q1)
+    - [Cómo inicializar el repositorio de git?.](#q2)
+    - [Cómo agregar archivos al stage area?.](#q3)
+    - [Cómo actualizar el mensaje de un commit ya hecho?.](#q4)
+    - [Cómo puedo ver el historial de commits?.](#q5)
+    - [Cómo podemos volver en el tiempo a un commit anterior?.](#q6)
+    - [Cuál es el ID o Hash de un commit?.](#q7)
+    - [Cuáles son los ciclos de vida de los archivos de Git?.](#q8)
 
 <div id='id1' />
 
@@ -163,9 +165,9 @@ Se agrego mas informacion en la documentacion del proyecto,
 Issue: 1#
 ```
 
-## <div id='id6' />
-
 ---
+
+## <div id='id6' />
 
 ## 6. ARCHIVOS ESPECIALES DE GIT 📁
 
@@ -194,7 +196,22 @@ Su principal proposito es llevar **registro** de los cambios en archivos de comp
 
 ---
 
-## <div id='q1' />
+## <div id='q1'>
+
+**_❓Como funciona git?._**
+
+➡️ Git se mantiene en constantes cambios entre los distintos estados.
+
+<img  width="100%" src="./images/git-basic.png">
+
+Cada estado puede ser revertido a uno anterior con sus respectivos comandos
+
+
+**[⬆ Volver a índice](#índice)**
+
+---
+
+## <div id='q2' />
 
 **_❓ Como inicializar el repositorio de git?._**
 
@@ -212,7 +229,7 @@ Con esto se crea el repositorio del proyecto con la configuracion inicial, crean
 
 ---
 
-## <div id='q2'>
+## <div id='q3'>
 
 **_❓Como agregar archivos al stage area?._**
 
@@ -230,7 +247,7 @@ git status
 
 ---
 
-## <div id='q3'>
+## <div id='q4'>
 
 **_❓Como actualizar el mensaje de un commit ya hecho?._**
 
@@ -244,7 +261,7 @@ la bandera -m permite escribir en el mismo comando.
 
 ---
 
-## <div id='q4'>
+## <div id='q5'>
 
 **❓ Como puedo ver el historial de commits?.**
 
@@ -267,14 +284,14 @@ Este comando tiene la posibilidad de agregarles decenas de banderas, entre ellas
 
 ---
 
-## <div id='q5'>
+## <div id='q6'>
 
 **❓ Como podemos volver en el tiempo a un commit anterior?.**
 
 ➡️ Hay 2 maneras de volver a un estado anterior del repositorio, una de ellas.
 
 ```
-git checkout + ID del commit
+git checkout <Commit hash>
 ```
 
 Nos permite volver a cualquier versión anterior de un archivo específico o incluso del proyecto entero.
@@ -282,12 +299,16 @@ Nos permite volver a cualquier versión anterior de un archivo específico o inc
 El otro método un tanto mas "rudo" es con el comando
 
 ```
-git reset
+git reset <bandera> <Commit hash>
 ```
 
 La principal diferencia con checkout esque no solo "volveremos en el tiempo", sino que dependiendo de la opcion que elijamos, estaremos en una u otro estado del proyecto ()
 
-Existen tres formas de usar este comando, con la bandera `--hard` que borra toda la informacion que tengamos en el staging area, y la que es un poco mas segura `--soft` que mantiene dicha informacion para que los cambios realizados sean aplicados desde un punto anterior y por ultimo `--mixed` que elimina los cambios hasta el working area.
+Existen tres formas de usar este comando:
+
+-   `--hard`
+
+con la bandera `--hard` que borra toda la informacion que tengamos en el staging area, y la que es un poco mas segura `--soft` que mantiene dicha informacion para que los cambios realizados sean aplicados desde un punto anterior y por ultimo `--mixed` que elimina los cambios hasta el working area.
 
 <br>
 
@@ -295,7 +316,7 @@ Existen tres formas de usar este comando, con la bandera `--hard` que borra toda
 
 ---
 
-## <div id='q6'>
+## <div id='q7'>
 
 **❓ Cúal es el ID o Hash de un commit?.**
 
@@ -333,7 +354,7 @@ Tanto **`9d2cdf3a12400cfaf9aa0c8fb0aa4e688f04a9cf`** en el commit completo como 
 
 ---
 
-## <div id='q7'>
+## <div id='q8'>
 
 **_❓Cuales son los ciclos de vida de los archivos de Git?._**
 
@@ -359,6 +380,18 @@ Tanto **`9d2cdf3a12400cfaf9aa0c8fb0aa4e688f04a9cf`** en el commit completo como 
 
 Por ultimo, hay un caso donde un archivo puede vivir en dos estados a la vez, `staged` y `untracked`,
 esto pasa cuando guardas los cambios de un archivo en el `stage area` _(con el comando `git add`)_, pero antes de guardarlo en el repositorio con `git commit`.
+
+<br>
+
+**[⬆ Volver a índice](#índice)**
+
+---
+
+## <div id='q9'>
+
+**_❓Cómo funciona git reset?._**
+
+➡️ `git reset` es uno de los comandos que nos permite volver en el tiempo, por lo que es bastante utilizado.
 
 <br>
 
